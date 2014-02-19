@@ -29,6 +29,7 @@ function consultarEstudiantes()
                         lista += "Documento: " + value.documento + "<br>";
                         lista += "Grupo: " + value.grupo + "<br>";
                         lista += "Foto: " + value.foto;
+                        lista += "Otra cosa!!";
                         lista += "</div>";
                         lista += "</li>";
                 });

@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+<script src="js/codigo.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Página uno</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#pagConsultarEst">Consultar Estudiantes</a></li>
+            <li><a href="#pagIngresarEst">Ingresar Estudiantes</a></li>
+			<li><a href="#pagEliminarEst">Eliminar Estudiantes</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pagConsultarEst">
+	<div data-role="header">
+		<h1>Consultar Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		<form action="php/consultar_estudiantes.php" method="POST" id="form">
+			<label>Ingrese Grupo</label>
+			<input type="text" id="txtGrupo" name="txtGrupo">
+			<input type="button" id="btnConsultar" value="Consultar">
+		</form>
+		<ul data-role="listview" data-theme="a" id="listaDatos">
+    	</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pagIngresarEst">
+	<div data-role="header">
+		<h1>Ingresar Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pagEliminarEst">
+	<div data-role="header">
+		<h1>Eliminar Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+</body>
+</html>

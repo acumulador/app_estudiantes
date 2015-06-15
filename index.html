@@ -2,25 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <title>Aplic. Web de jQuery Mobile</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-<script src="js/codigo.js"></script>
 </head> 
 <body> 
 
-<div data-role="page" id="page">
+<div data-role="page" id="pagPPal">
 	<div data-role="header">
-		<h1>Página uno</h1>
+		<h1>Principal</h1>
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview">
-			<li><a href="#pagConsultarEst">Consultar Estudiantes</a></li>
-            <li><a href="#pagIngresarEst">Ingresar Estudiantes</a></li>
-			<li><a href="#pagEliminarEst">Eliminar Estudiantes</a></li>
+			<li><a href="#pagConsultaEstudiantes">Consulta Estudiantes</a></li>
+            <li><a href="#pagAgregaEstudiantes">Agrega Estudiantes</a></li>
+			<li><a href="#pagEliminaEstudiantes">Elimina Estudiantes</a></li>
 		</ul>		
 	</div>
 	<div data-role="footer">
@@ -28,39 +26,65 @@
 	</div>
 </div>
 
-<div data-role="page" id="pagConsultarEst">
+<div data-role="page" id="pagConsultaEstudiantes">
 	<div data-role="header">
-		<h1>Consultar Estudiantes</h1>
+		<a href="#" data-icon="back" data-rel="back" title="Go back">Atras</a>
+		<h1>Consulta Estudiantes</h1>
 	</div>
 	<div data-role="content">	
-		<form action="php/consultar_estudiantes.php" method="POST" id="form">
-			<label>Ingrese Grupo</label>
-			<input type="text" id="txtGrupo" name="txtGrupo">
-			<input type="button" id="btnConsultar" value="Consultar">
-		</form>
-		<ul data-role="listview" data-theme="a" id="listaDatos">
-    	</ul>		
+		<!-- Formulario de consulta -->
+		<form action="php/consultar_estudiantes.php" id="form" method="post">
+		<!-- <form action="http://www.edusoftglobal.com/estudiantes/php/consultar_estudiantes.php" id="form" method="post"> -->
+        <label>Grupo a consultar</label>
+        <input type="text" id="txtGrupo" name="txtGrupo">
+        <input type="button" id="btnConsultar" value="Consultar">
+        </form>
+
+        <br>
+         <!-- Mostrar resultado de la consulta -->
+	    <div id="mostrarDatos">
+	    	<ul data-role="listview" data-theme="a" id="listaDatos">
+	    	</ul>
+	    </div>
+			
 	</div>
 	<div data-role="footer">
 		<h4>Pie de página</h4>
 	</div>
 </div>
 
-<div data-role="page" id="pagIngresarEst">
+<div data-role="page" id="pagAgregaEstudiantes">
 	<div data-role="header">
-		<h1>Ingresar Estudiantes</h1>
+		<a href="#" data-icon="back" data-rel="back" title="Go back">Atras</a>
+		<h1>Agrega Estudiantes</h1>
 	</div>
-	<div data-role="content">	
-		Contenido		
+	<div data-role="content">
+		<div id="mensa"></div>	
+		<form id="formu" >
+		<!-- <form method="POST" id="form" data-ajax="false"> -->
+			<input type="text" name="txtDocumento" id="txtDocumento" placeholder="Ingresa Documento">
+			<input type="text" name="txtNom" id="txtNom" placeholder="Ingresa Nombre">
+			<select name="cboGrupo" id="cboGrupo">
+				<option value="2A">Grupo: 2A</option>
+				<option value="2B">Grupo: 2B</option>
+				<option value="5A">Grupo: 5A</option>
+				<option value="5B">Grupo: 5B</option>
+			</select>
+			<input type="text" name="txtFoto" id="txtFoto" placeholder="Ingresa Foto">
+			<button id="btnAgregar" type="submit">Agregar</button>
+
+			<!-- <input type="submit" id="btnAgregar" value="Agregar"> -->
+		</form>		
 	</div>
 	<div data-role="footer">
 		<h4>Pie de página</h4>
 	</div>
 </div>
 
-<div data-role="page" id="pagEliminarEst">
+<div data-role="page" id="pagEliminaEstudiantes">
 	<div data-role="header">
-		<h1>Eliminar Estudiantes</h1>
+		<a href="#" data-icon="back" data-rel="back" title="Go back">Atras</a>
+		<h1>Elimina Estudiantes</h1>
 	</div>
 	<div data-role="content">	
 		Contenido		
@@ -71,4 +95,9 @@
 </div>
 
 </body>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/codigo.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 </html>

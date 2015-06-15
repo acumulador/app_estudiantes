@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prueba</title>
+</head>
+<body>
+	<div id="mensa"></div>
+	<form action="php/agrega_estudiantes.php" method="POST" id="form">
+			<input type="text" name="txtDocumento" id="txtDocumento" placeholder="Ingresa Documento">
+			<input type="text" name="txtNombre" id="txtNombre" placeholder="Ingresa Nombre">
+			<select name="cboGrupo" id="cboGrupo">
+				<option value="2A">Grupo: 2A</option>
+				<option value="2B">Grupo: 2B</option>
+				<option value="5A">Grupo: 5A</option>
+				<option value="5B">Grupo: 5B</option>
+			</select>
+			<input type="text" name="txtFoto" id="txtFoto" placeholder="Ingresa Foto">
+			<input type="button" id="btnAgregar" value="Agregar">
+		</form>
+</body>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/codigo.js"></script>
+
+</html>

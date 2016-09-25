@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id = "com.alter.phonegap" version = "1.0" xmlns = "http://www.w3.org/ns/widgets" xmlns:cdv = "http://cordova.apache.org/ns/1.0">
+<name>Prueba GAP</name>
+<description>
+	Prueba GAP
+</description>
+
+<author email = "correo@gmail.com">
+	Ejemplo
+</author>
+
+<icon src="ico-app.png" />
+<preference name = "orientation" value = "default" />
+<preference name = "permission" value = "none" />
+<preference name = "target-device" value = "universal" />
+<preference name = "fullscreen" value = "true" />
+<preference name = "DisallowOverscroll" value = "true" />
+<preference name = "prerendered-icon" value = "true" />
+<content src = "index.html" />
+<access origin ="*" />
+</widget>
